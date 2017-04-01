@@ -1,0 +1,33 @@
+digits = ARGV
+
+def digital_number(digit)
+
+#Start case for digit input
+  case digit
+  when '1'
+  puts " | "
+  puts "   "
+  puts " | "
+  puts "   "
+
+  when '2'
+  puts " - "
+  puts "  |"
+  puts " - "
+  puts "|  "
+  puts " - "
+
+  when '12'
+  puts "    - "
+  puts " |   |"
+  puts "    - "
+  puts " | |  "
+  puts "    - "
+
+  else
+  puts "That is not an available number."
+
+  end
+end
+
+digits.each { |digit| digital_number(digit) }

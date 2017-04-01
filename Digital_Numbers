@@ -1,0 +1,30 @@
+puts "Enter numbers between 0-9 up to 4 digits: "
+
+x = gets.chomp
+digits = x.split('')
+
+
+def digital_number(digit)
+
+#Start case for digit input
+  case digit
+  when '1'
+  puts " | "
+  puts "   "
+  puts " | "
+  puts "   "
+
+  when '2'
+  puts " - "
+  puts "  |"
+  puts " - "
+  puts "|  "
+  puts " - "
+
+  else
+  puts "That is not an available number."
+
+  end
+end
+
+digits.each { |digit| digital_number(digit) }
