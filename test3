@@ -1,0 +1,32 @@
+=begin
+https://gist.github.com/pdsouza29/996365
+"Manipulated this person's code to output just numbers and no size"
+=end
+
+num = $*[0]
+
+### rendering ###
+
+hz = ' ' + '-' + ' '   # ' - '
+vt = ['|' + ' ' + '|'] # '| |'
+vl = ['|' + ' ' + ' '] # '|  '
+vr = [' ' + ' ' + '|'] # '  |'
+bk = ' ' * hz.size     # '   '
+
+lcd = [
+        [hz] << vt << bk << vt << hz, # 0
+        [bk] << vr << bk << vr << bk, # 1
+        [hz] << vr << hz << vl << hz, # 2
+        [hz] << vr << hz << vr << hz, # 3
+        [bk] << vt << hz << vr << bk, # 4
+        [hz] << vl << hz << vr << hz, # 5
+        [hz] << vl << hz << vt << hz, # 6
+        [hz] << vr << bk << vr << bk, # 7
+        [hz] << vt << hz << vt << hz, # 8
+        [hz] << vt << hz << vr << hz, # 9
+                                      ]
+### output ###
+
+(0...5).each do |i|
+  puts num.chars.collect { |n| lcd[n.to_i].flatten[i] }.join ' '
+end

@@ -24,6 +24,13 @@ def digital_number(digit)
   puts " | |  "
   puts "    - "
 
+  when '6489'
+  puts " -       -   - "
+  puts "|   | | | | | |"
+  puts " -   -   -   - "
+  puts "| |   | | |   |"
+  puts " -       -   - "
+
   else
   puts "That is not an available number."
 
