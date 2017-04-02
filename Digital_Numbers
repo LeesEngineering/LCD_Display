@@ -1,4 +1,4 @@
-puts "Enter numbers between 0-9 up to 4 digits: "
+puts "Enter numbers between 0-9: "
 
 x = gets.chomp
 digits = x.split('')
@@ -8,6 +8,13 @@ def digital_number(digit)
 
 #Start case for digit input
   case digit
+
+  when '0'
+  puts " - "
+  puts "| |"
+  puts "| |"
+  puts " - "
+
   when '1'
   puts " | "
   puts "   "
@@ -19,6 +26,53 @@ def digital_number(digit)
   puts "  |"
   puts " - "
   puts "|  "
+  puts " - "
+
+  when '3'
+  puts " - "
+  puts "  |"
+  puts " - "
+  puts "  |"
+  puts " - "
+
+  when '4'
+  puts "  "
+  puts "| |"
+  puts " - "
+  puts "  |"
+
+  when '5'
+  puts " - "
+  puts "|  "
+  puts " - "
+  puts "  |"
+  puts " - "
+
+  when '6'
+  puts " - "
+  puts "|  "
+  puts " - "
+  puts "| |"
+  puts " - "
+
+  when '7'
+  puts "-- "
+  puts "  |"
+  puts "   "
+  puts "  |"
+
+  when '8'
+  puts " - "
+  puts "| |"
+  puts " - "
+  puts "| |"
+  puts " - "
+
+  when '9'
+  puts " - "
+  puts "| |"
+  puts " - "
+  puts "  |"
   puts " - "
 
   else
