@@ -1,0 +1,108 @@
+# Add an argument in the terminal and
+# .to_s converts the argument into a string
+# so that ".scan" can take a string argument
+
+x = ARGV.to_s
+
+puts "Arguments entered is between 0-9: #{x}"
+
+### gets.chomp is commented out ###
+#x = gets.chomp
+### gets.chomp is commented out ###
+
+#These are empty arrays that get added in the cases
+@arr1 = []
+@arr2 = []
+@arr3 = []
+@arr4 = []
+@arr5 = []
+
+def digital_number(n)
+
+  #Start case for digit input
+  case n
+
+  when "0"
+    @arr1 << " - "
+    @arr2 << "| |"
+    @arr3 << "   "
+    @arr4 << "| |"
+    @arr5 << " - "
+
+  when "1"
+    @arr1 << "   "
+    @arr2 << " | "
+    @arr3 << "   "
+    @arr4 << " | "
+    @arr5 << "   "
+
+  when "2"
+    @arr1 << " - "
+    @arr2 << "  |"
+    @arr3 << " - "
+    @arr4 << "|  "
+    @arr5 << " - "
+
+    when '3'
+    @arr1 << " - "
+    @arr2 << "  |"
+    @arr3 << " - "
+    @arr4 << "  |"
+    @arr5 << " - "
+
+    when '4'
+    @arr1 << "   "
+    @arr2 << "| |"
+    @arr3 << " - "
+    @arr4 << "  |"
+    @arr5 << "   "
+
+    when '5'
+    @arr1 << " - "
+    @arr2 << "|  "
+    @arr3 << " - "
+    @arr4 << "  |"
+    @arr5 << " - "
+
+    when '6'
+    @arr1 << " - "
+    @arr2 << "|  "
+    @arr3 << " - "
+    @arr4 << "| |"
+    @arr5 << " - "
+
+    when '7'
+    @arr1 << "-- "
+    @arr2 << "  |"
+    @arr3 << "   "
+    @arr4 << "  |"
+    @arr5 << "   "
+
+    when '8'
+    @arr1 << " - "
+    @arr2 << "| |"
+    @arr3 << " - "
+    @arr4 << "| |"
+    @arr5 << " - "
+
+    when '9'
+    @arr1 << " - "
+    @arr2 << "| |"
+    @arr3 << " - "
+    @arr4 << "  |"
+    @arr5 << " - "
+
+  else
+    puts "That is not an available number."
+  end
+end
+# This part iterates the method for each numbers inputted
+x.scan(/\w/).each{|d| digital_number(d)}
+
+# Output #
+puts "   "
+puts @arr1.join(' ')
+puts @arr2.join(' ')
+puts @arr3.join(' ')
+puts @arr4.join(' ')
+puts @arr5.join(' ')
